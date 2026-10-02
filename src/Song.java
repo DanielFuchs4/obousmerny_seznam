@@ -1,31 +1,30 @@
 public class Song {
+    private String nazev;
+    private String interpret;
+    private int delkaS;
+    private int pocetPrehrani;
 
-    private String songName;
-    private String artistName;
-    private int lenght;
-
-    public Song(String songName, String artistName, int lenght) {
-        this.songName = songName;
-        this.artistName = artistName;
-        this.lenght = lenght;
+    public Song(String nazev, String interpret, int delkaS) {
+        this.nazev = nazev;
+        this.interpret = interpret;
+        this.delkaS = delkaS;
+        this.pocetPrehrani = 0;
     }
 
-    public String getSongName() {
-        return songName;
-    }
-    public void setSongName(String songName) {
-        this.songName = songName;
-    }
-    public String getArtistName() {
-        return artistName;
-    }
-    public void setArtistName(String artistName) {
-        this.artistName = artistName;
-    }
-    public int getLenght() {
-        return lenght;
-    }
-    public void setLenght(int lenght) {
-        this.lenght = lenght;
+    public String getNazev() { return nazev; }
+    public void setNazev(String nazev) { this.nazev = nazev; }
+
+    public String getInterpret() { return interpret; }
+    public void setInterpret(String interpret) { this.interpret = interpret; }
+
+    public int getDelkaS() { return delkaS; }
+    public void setDelkaS(int delkaS) { this.delkaS = delkaS; }
+
+    public int getPocetPrehrani() { return pocetPrehrani; }
+    public void incrementPocetPrehrani() { this.pocetPrehrani++; }
+
+    @Override
+    public String toString() {
+        return nazev + " - " + interpret + " [" + delkaS + "s]";
     }
 }
